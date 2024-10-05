@@ -65,7 +65,9 @@ public:
     {
         if (mQueryDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO before mQueryDelegate->OnMdnsPacketData fn call.");
             mQueryDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO after mQueryDelegate->OnMdnsPacketData fn call.");
         }
     }
 
@@ -73,7 +75,9 @@ public:
     {
         if (mResponseDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO before mResponseDelegate->OnMdnsPacketData fn call.");
             mResponseDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO after mResponseDelegate->OnMdnPacketData fn call.");
         }
     }
 

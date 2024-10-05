@@ -65,7 +65,9 @@ public:
     {
         if (mQueryDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO testing 1-1");
             mQueryDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO testing 1-2");
         }
     }
 
@@ -73,7 +75,9 @@ public:
     {
         if (mResponseDelegate != nullptr)
         {
+            ChipLogProgress(Discovery, "SHAO testing 2-1");
             mResponseDelegate->OnMdnsPacketData(data, info);
+            ChipLogProgress(Discovery, "SHAO testing 2-2");
         }
     }
 

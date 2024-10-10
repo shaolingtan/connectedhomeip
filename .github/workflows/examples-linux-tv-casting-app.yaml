@@ -58,13 +58,13 @@ jobs:
               run: |
                   ./scripts/run_in_build_env.sh \
                    # "scripts/examples/gn_build_example.sh examples/tv-app/linux/ out/tv-app"
-                    "./scripts/build/build_examples.py --target linux-x64-tv-app build out/tv-app"
+                    "./scripts/build/build_examples.py --target linux-x64-tv-app build"
 
             - name: Build Linux tv-casting-app
               run: |
                   ./scripts/run_in_build_env.sh \
                    # "scripts/examples/gn_build_example.sh examples/tv-casting-app/linux/ out/tv-casting-app chip_casting_simplified=true"
-                    "./scripts/build/build_examples.py --target linux-x64-tv-casting-app build out/tv-casting-app chip_casting_simplified=true"
+                    "./scripts/build/build_examples.py --target linux-x64-tv-casting-app build chip_casting_simplified=true"
 
             - name:
                   Test casting from Linux tv-casting-app to Linux tv-app -
